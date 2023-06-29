@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "tugboat-solr/**"
+      - ".github/workflows/build-tugboat-solr"
     branches:
       - 'main'
 

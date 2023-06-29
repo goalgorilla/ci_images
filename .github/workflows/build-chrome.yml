@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "chrome/**"
+      - ".github/workflows/build-chrome"
     branches:
       - 'main'
 

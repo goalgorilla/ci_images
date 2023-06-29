@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "tugboat-php/**"
+      - ".github/workflows/build-tugboat-php"
     branches:
       - 'main'
 

@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "solr/**"
+      - ".github/workflows/build-solr"
     branches:
       - 'main'
 
