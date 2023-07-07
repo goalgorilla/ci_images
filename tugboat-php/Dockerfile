@@ -1,6 +1,6 @@
 ARG VERSION=apache
 
-FROM tugboatqa/php:8.0-apache
+FROM tugboatqa/php:$VERSION
 
 ENV COMPOSER_MEMORY_LIMIT=-1
 
