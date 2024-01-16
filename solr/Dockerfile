@@ -2,6 +2,6 @@ ARG VERSION=latest
 
 FROM solr:$VERSION
 
-ADD config /solr-conf/conf
+ADD config-"${VERSION}" /solr-conf/conf
 
 ENTRYPOINT ["solr-precreate", "drupal", "/solr-conf"]
