@@ -3,8 +3,6 @@ ARG CONFIG_VERSION=9
 
 FROM solr:$VERSION
 
-ARG CONFIG_VERSION
-
 ADD config-"${CONFIG_VERSION}" /solr-conf/conf
 
 ENTRYPOINT ["solr-precreate", "drupal", "/solr-conf"]
