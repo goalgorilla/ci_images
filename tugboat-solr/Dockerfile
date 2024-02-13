@@ -1,4 +1,5 @@
 ARG VERSION=latest
+ARG CONFIG_VERSION=9
 
 FROM tugboatqa/solr:$VERSION
 
