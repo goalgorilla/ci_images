@@ -22,10 +22,15 @@ jobs:
 
     strategy:
       matrix:
-        version:
-          - "8.11"
-          - "9"
-          - latest
+        include:
+          - version: 8
+            config_version: 8
+          - version: 8.11
+            config_version: 8
+          - version: 9.2
+            config_version: 9
+          - version: latest
+            config_version: 9
 
     # There should be no need to edit below this line.
     steps:
@@ -46,7 +51,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v4
         with:
-          build-args: VERSION=${{ matrix.version }}
+          build-args: VERSION=${{ matrix.version }} CONFIG_VERSION=${{ matrix.config_version }}
           context: "{{defaultContext}}:${{ env.SUBDIRECTORY }}"
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.version }}
