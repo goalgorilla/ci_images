@@ -12,4 +12,4 @@ ARG CONFIG_VERSION
 
 ADD config-"${CONFIG_VERSION}" /solr-conf/conf
 
-ENTRYPOINT ["init-var-solr", "solr-precreate", "drupal", "/solr-conf"]
+ENTRYPOINT ["docker-entrypoint.sh","solr-precreate", "drupal", "/solr-conf"]
