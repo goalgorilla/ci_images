@@ -26,6 +26,7 @@ jobs:
           - 8.0-apache
           - 8.1-apache
           - 8.2-apache
+          - 8.3-apache
 
     # There should be no need to edit below this line.
     steps:
