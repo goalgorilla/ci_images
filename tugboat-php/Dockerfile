@@ -12,6 +12,7 @@ RUN set -x && apt-get update && \
 
 RUN ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load
 
+# Set the memory limit to 512M.
 RUN echo "memory_limit = 512M" >> /usr/local/etc/php/conf.d/my-php.ini
 
 RUN rm -rf $DOCROOT/../html.original $DOCROOT
