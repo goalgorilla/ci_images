@@ -1,3 +1,4 @@
+# Supported PHP versions: 8.0 – 8.4 (see build-tugboat-php.yml matrix).
 ARG VERSION=apache
 
 FROM tugboatqa/php:$VERSION
