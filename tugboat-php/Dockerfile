@@ -28,3 +28,6 @@ RUN docker-php-ext-install gmp
 RUN apt-get install -y zlib1g-dev libicu-dev g++
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-install intl
+
+# Rebuilt on 2026-11-20 to pick up PHP 8.4.28 (php-src security release of
+# 2026-11-19) from tugboatqa/php:8.4-apache. Changing this file triggers a rebuild.
