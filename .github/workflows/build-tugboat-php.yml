@@ -22,9 +22,9 @@ jobs:
       packages: write
 
     strategy:
+      fail-fast: false
       matrix:
         version:
-          - 8.0-apache
           - 8.1-apache
           - 8.2-apache
           - 8.3-apache
