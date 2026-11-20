@@ -4,9 +4,10 @@ on:
   push:
     paths:
       - "tugboat-php/**"
-      - ".github/workflows/build-tugboat-php"
+      - ".github/workflows/build-tugboat-php.yml"
     branches:
       - 'main'
+  workflow_dispatch:
 
 env:
   SUBDIRECTORY: tugboat-php
