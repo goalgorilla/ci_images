@@ -1,11 +1,11 @@
 # Supported PHP versions: 8.0 – 8.4 (see build-tugboat-php.yml matrix).
-ARG VERSION=apache
+ARG VERSION=apache@sha256:82abd42adcdd1a2777ac37da012b32ab1629ecba4ac5c17f1ba18ccedb283108
 
 FROM tugboatqa/php:$VERSION
 
 ENV COMPOSER_MEMORY_LIMIT=-1
 
-RUN set -x && apt-get update && \
+RUN set -x && apt-get update && apt-get upgrade -y && \
   apt-get -y install libzip-dev jq ssh libxml2-dev && \
   apt-get clean && \
   docker-php-ext-install zip sockets bcmath soap && \
